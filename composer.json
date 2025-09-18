@@ -1,0 +1,16 @@
+{
+    "name": "iceithq/mail-php",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "com\\iceithq\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ian",
+            "email": "ian.escarro@gmail.com"
+        }
+    ],
+    "require": {}
+}
