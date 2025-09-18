@@ -7,6 +7,7 @@ $api_url = 'https://mail.iceithq.com/api';
 $api_key = 'YOUR_API_KEY';
 $mail = new com\iceithq\Mail($api_url, $api_key);
 $r = $mail->to('email@example.com')
+    ->attach('art/logo.png')
     ->send('Test subject', 'Test body');
 
 print_r($r);

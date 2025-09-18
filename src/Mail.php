@@ -19,12 +19,12 @@ class Mail
     function attach($filePath)
     {
         // $this->attachments[] = new CURLFile($filePath, mime_content_type($filePath), basename($filePath)); //$file;
-        $filePaths = $filePath;
-        if (!is_array($filePath)) {
-            $filePaths[] = $filePath;
-        }
+        $filePaths = is_array($filePath) ? $filePath : [$filePath];
+        // if (!is_array($filePath)) {
+        //     $filePaths[] = $filePath;
+        // }
         foreach ($filePaths as $filePath) {
-            $this->attachments[] = new CURLFile($filePath, mime_content_type($filePath), basename($filePath));
+            $this->attachments[] = new \CURLFile($filePath, mime_content_type($filePath), basename($filePath));
         }
         return $this;
     }
