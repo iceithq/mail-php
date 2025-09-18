@@ -5,13 +5,15 @@ namespace com\iceithq;
 class Mail
 {
     var $api_url;
+    var $api_key;
 
     var $attachments;
     var $to;
 
-    function __construct($api_url = '')
+    function __construct($api_url = '', $api_key = '')
     {
         $this->api_url = $api_url;
+        $this->api_key = $api_key;
     }
 
     function attach($filePath)
@@ -35,7 +37,7 @@ class Mail
 
     function send($subject, $body)
     {
-        $apiKey = '';
+        $apiKey = $this->api_key;
 
         $payload = [
             'to' => $this->to,
