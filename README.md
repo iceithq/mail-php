@@ -16,6 +16,7 @@ Designed under the namespace `com\iceithq`.
     "com\\iceithq\\": "src/"
   }
 }
+```
 
 3. Run:
 
